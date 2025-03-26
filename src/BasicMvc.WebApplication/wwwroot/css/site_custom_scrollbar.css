@@ -1,0 +1,24 @@
+main {
+    padding-left: 10px;
+}
+
+    main::-webkit-scrollbar {
+        width: 10px; /* Largura da barra de rolagem */
+    }
+
+    main::-webkit-scrollbar-track {
+        background: #ffffff00; /* Cor do fundo da trilha da barra de rolagem */
+        border-radius: 10px;
+    }
+
+    main::-webkit-scrollbar-thumb {
+        background-color: #be0c0c; /* Cor do "polegar" da barra de rolagem */
+        border-radius: 10px;
+    }
+
+        main::-webkit-scrollbar-thumb:hover {
+            background: #3b7b7f; /* Cor do "polegar" ao passar o mouse */
+        }
+
+body {
+}

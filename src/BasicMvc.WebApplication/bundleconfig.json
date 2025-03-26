@@ -1,0 +1,22 @@
+[
+  {
+    "outputFileName": "wwwroot/css/site_bundle.css",
+    "inputFiles": [
+      "wwwroot/css/site.css",
+      "wwwroot/css/site_custom_bootstrap.css",
+      "wwwroot/css/site_custom_scrollbar.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site_bundle.js",
+    "inputFiles": [
+      "wwwroot/js/site.js",
+      "wwwroot/js/site_ui.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

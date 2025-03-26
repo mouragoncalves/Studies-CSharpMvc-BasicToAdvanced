@@ -1,0 +1,67 @@
+﻿@* @System.Globalization.CultureInfo.CurrentUICulture *@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Shield: Hospedagem Proficional</title>
+
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site_custom_bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site_custom_scrollbar.css" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+
+    <environment include="Development">
+    </environment>
+
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    </environment>
+</head>
+<body class="d-flex flex-column vh-100">
+
+    <partial name="_HeaderPartial" />
+
+    @* @await Html.PartialAsync("_HeaderPartial") *@
+
+    <main role="main" class="flex-grow-1 overflow-y-scroll">
+
+        @* <partial name="_CookieConsentPartial" /> *@
+
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+
+    <partial name="_FooterPartial" />
+
+    <script type="text/javascript" src="~/js/site.js"></script>
+    <script type="text/javascript" src="~/js/site_ui.js"></script>
+
+    <environment include="Development">
+        <script type="text/javascript" src="~/lib/chart-js/chart.umd.js"></script>
+        <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="~/lib/jquery/jquery.js"></script>
+        <script type="text/javascript" src="~/lib/font-awesome/js/all.js"></script>
+        <script type="text/javascript" src="~/lib/jquery-validate/jquery.validate.js"></script>
+        <script type="text/javascript" src="~/lib/jquery-validate/additional-methods.js"></script>
+        <script type="text/javascript" src="~/lib/jquery-validate/localization/messages_pt_BR.js"></script>
+        <script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    </environment>
+
+    <environment exclude="Development">
+        @* <script type="text/javascript" src="~/js/site.min.js"></script> *@
+        <script type="text/javascript" src="~/lib/chart-js/chart.umd.min.js"></script>
+        <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="~/lib/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="~/lib/font-awesome/js/all.min.js"></script>
+    </environment>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
